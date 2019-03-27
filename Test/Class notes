@@ -1,0 +1,29 @@
+# imports
+import pygame
+import time
+
+Size = (1080, 720)
+Screen = pygame.display.set_mode(Size)
+WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+BLUE2 = (10, 10, 230)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+ORANGE = (255, 100, 0)
+PURPLE = (255, 0, 255)
+Screen.fill(BLUE2)
+pygame.draw.rect(Screen, PURPLE , [[20, 20], [1040, 680]], 2)
+pygame.draw.ellipse(Screen, PURPLE, [[20, 20], [1040, 680]], 2)
+pygame.display.set_caption('CLASS NOTES')
+pygame.display.flip()
+time.sleep(1)
+pygame.draw.ellipse(Screen, GREEN, [[20, 20], [1040, 680]], 2)
+pygame.display.flip()
+
+Done = False
+clock = pygame.time.Clock()
+while not Done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            Done = True
